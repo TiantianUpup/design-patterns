@@ -1,8 +1,10 @@
-# Getting Started
+# 装饰器模式
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### 装饰器模式介绍
+- Resume => 接口定义了抽象方法，装饰器类和被装饰类都要实现该接口
+- MyResume => 被装饰类
+- Decorator => 装饰器类
+- WorkExperienceDecorator & OtherDecorator => 具体的装饰器类
+- Test => 测试类  
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.1.8.RELEASE/maven-plugin/)
-
+附：[相关文章]()

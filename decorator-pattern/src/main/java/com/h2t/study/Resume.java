@@ -1,7 +1,7 @@
 package com.h2t.study;
 
 /**
- * TODO Description
+ * 简历接口
  *
  * @author hetiantian
  * @version 1.0
