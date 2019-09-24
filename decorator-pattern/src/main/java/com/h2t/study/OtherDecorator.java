@@ -21,6 +21,10 @@ public class OtherDecorator extends Decorator {
     public void selfIntroduce() {
         super.selfIntroduce();
         //添加其他信息，比如github、个人博客
+        addOther();
+    }
+
+    public void addOther() {
         System.out.println("博客：https://juejin.im/user/5b8f8cc05188255c735f3f1d");
         System.out.println("github：https://github.com/TiantianUpup");
     }
