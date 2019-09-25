@@ -7,7 +7,7 @@ package com.h2t.study;
  * @version 1.0
  * @Date 2019/09/24 15:27
  */
-public class Decorator implements Resume {
+public abstract class Decorator implements Resume {
     /**
      * 接口
      */
