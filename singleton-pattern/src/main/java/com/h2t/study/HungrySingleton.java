@@ -8,6 +8,9 @@ package com.h2t.study;
  * @Date 2019/09/25 16:22
  */
 public class HungrySingleton {
+    /**
+     * static修饰，在类加载时只初始化一次
+     */
     private static HungrySingleton hungrySingleton = new HungrySingleton();
 
     /**
