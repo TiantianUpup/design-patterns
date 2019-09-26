@@ -26,4 +26,8 @@ public class LazyStaticSingleton implements Serializable {
     private static class LazyStaticSingletonHolder {
         private static LazyStaticSingleton lazyStaticSingleton = new LazyStaticSingleton();
     }
+
+    private Object readResolve() {
+        return LazyStaticSingletonHolder.lazyStaticSingleton;
+    }
 }

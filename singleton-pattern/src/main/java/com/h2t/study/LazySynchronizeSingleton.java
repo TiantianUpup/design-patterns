@@ -25,4 +25,8 @@ public class LazySynchronizeSingleton implements Serializable {
 
         return lazySynchronizeSingleton;
     }
+
+    private Object readResolve() {
+        return lazySynchronizeSingleton;
+    }
 }

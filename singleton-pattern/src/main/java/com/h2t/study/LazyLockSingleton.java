@@ -37,4 +37,8 @@ public class LazyLockSingleton implements Serializable {
 
         return lazyLockSingleton;
     }
+
+    private Object readResolve() {
+        return lazyLockSingleton;
+    }
 }
