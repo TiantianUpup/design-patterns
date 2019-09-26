@@ -1,5 +1,6 @@
 package com.h2t.study;
 
+import java.io.Serializable;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -10,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @version 1.0
  * @Date 2019/09/25 17:36
  */
-public class LazyLockSingleton {
+public class LazyLockSingleton implements Serializable {
     private static LazyLockSingleton lazyLockSingleton = null;
 
     /**

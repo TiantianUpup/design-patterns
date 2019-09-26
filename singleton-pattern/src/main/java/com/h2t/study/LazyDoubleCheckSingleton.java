@@ -1,5 +1,7 @@
 package com.h2t.study;
 
+import java.io.Serializable;
+
 /**
  * 基于双重锁检查的懒汉式创建单例对象
  *
@@ -7,7 +9,7 @@ package com.h2t.study;
  * @version 1.0
  * @Date 2019/09/25 17:44
  */
-public class LazyDoubleCheckSingleton {
+public class LazyDoubleCheckSingleton implements Serializable {
     /**
      * 使用volatile进行修饰，禁止指令重排
      */

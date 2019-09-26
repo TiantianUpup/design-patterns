@@ -1,5 +1,7 @@
 package com.h2t.study;
 
+import java.io.Serializable;
+
 /**
  * 基于饿汉式创建单例对象
  *
@@ -7,7 +9,7 @@ package com.h2t.study;
  * @version 1.0
  * @Date 2019/09/25 16:22
  */
-public class HungrySingleton {
+public class HungrySingleton implements Serializable {
     /**
      * static修饰，在类加载时只初始化一次
      */
