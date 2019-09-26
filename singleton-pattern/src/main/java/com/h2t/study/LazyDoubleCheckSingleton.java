@@ -32,4 +32,8 @@ public class LazyDoubleCheckSingleton implements Serializable {
 
         return lazyDoubleCheckSingleton;
     }
+
+    private Object readResolve() {
+        return lazyDoubleCheckSingleton;
+    }
 }
