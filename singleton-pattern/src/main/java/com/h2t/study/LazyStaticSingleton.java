@@ -11,9 +11,21 @@ import java.io.Serializable;
  */
 public class LazyStaticSingleton implements Serializable {
     /**
+     * 是否已经调用过一次构造函数
+     */
+    private static boolean flag = false;
+
+    /**
      * 构造函数私有化
      */
     private LazyStaticSingleton() {
+        synchronized (LazyStaticSingleton.class) {
+            if (flag == false) {
+                flag = !flag;
+            } else {
+                throw new RuntimeException("单例模式被攻击");
+            }
+        }
     }
 
     public static LazyStaticSingleton getLazyStaticSingleton() {
