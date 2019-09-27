@@ -16,6 +16,7 @@ public class ReflectAttackTest {
         LazyStaticSingleton lazyStaticSingleton = LazyStaticSingleton.getLazyStaticSingleton();
         //通过反射创建LazyStaticSingleton
         Constructor<LazyStaticSingleton> constructor = LazyStaticSingleton.class.getDeclaredConstructor();
+        //调用setAccessible(true)调用私有的构造函数
         constructor.setAccessible(true);
         LazyStaticSingleton lazyStaticSingleton1 = constructor.newInstance();
         //打印结果为false，说明又创建了一个新对象
