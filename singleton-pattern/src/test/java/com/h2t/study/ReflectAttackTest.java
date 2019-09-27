@@ -11,7 +11,7 @@ import java.lang.reflect.InvocationTargetException;
  * @Date 2019/09/26 19:00
  */
 public class ReflectAttackTest {
-    public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchFieldException {
         //静态内部类
         LazyStaticSingleton lazyStaticSingleton = LazyStaticSingleton.getLazyStaticSingleton();
         //通过反射创建LazyStaticSingleton
@@ -24,6 +24,12 @@ public class ReflectAttackTest {
 
         //synchronize
         LazySynchronizeSingleton lazySynchronizeSingleton = LazySynchronizeSingleton.getLazySynchronizeSingleton();
+
+        //调用反射前将flag设置为false[static修改flag]
+//        Field flagField = lazySynchronizeSingleton.getClass().getDeclaredField("flag");
+//        flagField.setAccessible(true);
+//        flagField.set(lazySynchronizeSingleton, false);
+
         Constructor<LazySynchronizeSingleton> lazySynchronizeSingletonConstructor = LazySynchronizeSingleton.class.getDeclaredConstructor();
         lazySynchronizeSingletonConstructor.setAccessible(true);
         LazySynchronizeSingleton lazySynchronizeSingleton1 = lazySynchronizeSingletonConstructor.newInstance();
