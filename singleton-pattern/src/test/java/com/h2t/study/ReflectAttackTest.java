@@ -29,6 +29,11 @@ public class ReflectAttackTest {
         LazySynchronizeSingleton lazySynchronizeSingleton1 = lazySynchronizeSingletonConstructor.newInstance();
         System.out.println(lazySynchronizeSingleton == lazySynchronizeSingleton1);
 
+        //调用反射前将flag设置为false
+//        Field flagField = lazySynchronizeSingleton.getClass().getDeclaredField("flag");
+//        flagField.setAccessible(true);
+//        flagField.set(lazySynchronizeSingleton, false);
+
         //lock【存在反射攻击】
         LazyLockSingleton lazyLockSingleton = LazyLockSingleton.getLazyLockSingleton();
         Constructor<LazyLockSingleton> lazyLockSingletonConstructor = LazyLockSingleton.class.getDeclaredConstructor();
